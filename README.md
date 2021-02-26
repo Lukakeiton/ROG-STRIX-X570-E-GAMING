@@ -16,7 +16,7 @@ RAM: 2x CORSAIR Vengeance LPX 16GB DDR4 3600Mhz
 NVMe:
 
 Goldenfir M.2 1TB (Windows 10)
-Asgard M.2 1TB (macOS Catalina 10.15.6)
+Asgard M.2 1TB (macOS Big Sur 11.2.2)
 SSD:
 
 Samsung 850 EVO 500GB (Data for macOS)
