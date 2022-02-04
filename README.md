@@ -1,5 +1,5 @@
 # ROG-STRIX-X570-E-GAMING
-EFI for Big Sur
+EFI for Monterey
 
 Specs:
 
