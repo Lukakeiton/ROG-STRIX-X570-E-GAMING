@@ -60,7 +60,7 @@ EFI for Ventura
 
 # WIFI / BLUETOOTH​
 
-# IF NOT USING A BROADCOM INTEL-WIFI PCI-E CARD
+# IF NOT USING A BROADCOM WIFI PCI-E CARD
 
 If you are using internal Intel wifi-bluetooth, use Intel wifi-bluetooth kext. Just enable the two intel-related entries under Kernel -> Add and disable the two entries which start with Brcm. Also rename USBMap.kext to USBMap(Broadcom).kext and rename USBMap(with Intel BT).kextUSBMap(with Intel BT).kext to USBMap.kext
 
