@@ -15,7 +15,9 @@ EFI for Ventura
 - Bootloader: OC 0.8.7
 - SMBios: MacPro 7,1
 
+
 # BIOS Settings
+
 - Enter BIOS -> Press Delete -> Enter Setupv1.0
 - Exit -> Load Optimised Defaults
 - Ai Tweaker -> Ai Overclock Tuner -> D.O.C.P.
@@ -28,6 +30,7 @@ EFI for Ventura
 - Boot -> Secure boot -> OS Type -> Windows UEFI mode
 - Boot -> Secure boot -> Key Management -> Clear Secure Boot Keys
 
+
 # ACPI SSDT's - All bypassed for other OS
 - SSDT-HPET.aml (HPET _CRS (Needs _CRS to XCRS Rename))
 - SSDT-PLUG.aml (CPU power management)
@@ -35,7 +38,10 @@ EFI for Ventura
 - SSDT-SBUS-MCHC.aml (SMBus Support)
 - SSDT-USBX.aml (USB power tables)
 - SSDT-GPU-6950XT.aml (GPU Spoof through bridge)
+
+
 # Kexts
+
 - Lilu.kext v1.6.2
 - VirtualSMC.kext v1.3.0
 - WhateverGreen.kext v1.6.2
@@ -60,23 +66,23 @@ EFI for Ventura
 
 # WIFI / BLUETOOTH​
 
-# IF NOT USING A BROADCOM WIFI PCI-E CARD
+## IF NOT USING A BROADCOM WIFI PCI-E CARD
 
 If you are using internal Intel wifi-bluetooth, use Intel wifi-bluetooth kext. Just enable the two intel-related entries under Kernel -> Add and disable the two entries which start with Brcm. Also rename USBMap.kext to USBMap(Broadcom).kext and rename USBMap(with Intel BT).kextUSBMap(with Intel BT).kext to USBMap.kext
 
 # GPU​
 
-# IF NOT USING AMD RX 6950 XT SERIES
+## IF NOT USING AMD RX 6950 XT SERIES
 
 Remove EFI/OC/ACPI/SSDT-GPU-6950XT.aml and remove it from conflig.plist ( ACPI -> Add ).
 
-# IF NOT USING AMD RDN2 GRAPHIC CARD 
+## IF NOT USING AMD RDN2 GRAPHIC CARD 
 
 Remove agdpmod=pikera from bootflags.
 
 # CPU​
 
-# IMPORTANT - PATCH INFO FOR SETTING THE CORRECT CORE COUNT FOR YOUR CPU
+## IMPORTANT - PATCH INFO FOR SETTING THE CORRECT CORE COUNT FOR YOUR CPU
 Core Count patch needs to be modified to boot your system. Find the two algrey - Force cpuid_cores_per_package patches and alter the Replace value only.
 
 Changing BA000000 0000/BA000000 0090* to BA <CoreCount> 0000 0000/BA <CoreCount> 0000 0090* substituting <CoreCount> with the hexadeciamal value matching your physical core count.
