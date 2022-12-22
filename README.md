@@ -12,6 +12,8 @@ EFI for Ventura
 - SSD: Crucial 500GB (Data for Windows)
 - Wifi/Bluetooth: BCM94360CS2
 - Monitor: AOC C24G1 144Hz
+- Bootloader: OC 0.8.7
+- SMBios: MacPro 7,1
 
 # BIOS Settings
 - Enter BIOS -> Press Delete -> Enter Setupv1.0
@@ -54,3 +56,43 @@ EFI for Ventura
 - USBMap.kext - ASUS ROG STRIX X570-E with/without wifi-bluetoth pcie card
 - IntelBTPatcher.kext v2.2.0 (Disabled by default)
 - IntelBluetoothFirmware.kext v2.2.0 (Disabled by default)
+
+
+# WIFI / BLUETOOTH​
+
+# IF NOT USING A BROADCOM INTEL-WIFI PCI-E CARD
+
+If you are using internal Intel wifi-bluetooth, use Intel wifi-bluetooth kext. Just enable the two intel-related entries under Kernel -> Add and disable the two entries which start with Brcm. Also rename USBMap.kext to USBMap(Broadcom).kext and rename USBMap(with Intel BT).kextUSBMap(with Intel BT).kext to USBMap.kext
+
+# GPU​
+
+# IF NOT USING AMD RX 6950 XT SERIES
+
+Remove EFI/OC/ACPI/SSDT-GPU-6950XT.aml and remove it from conflig.plist ( ACPI -> Add ).
+
+# IF NOT USING AMD RDN2 GRAPHIC CARD 
+
+Remove agdpmod=pikera from bootflags.
+
+# CPU​
+
+# IMPORTANT - PATCH INFO FOR SETTING THE CORRECT CORE COUNT FOR YOUR CPU
+Core Count patch needs to be modified to boot your system. Find the two algrey - Force cpuid_cores_per_package patches and alter the Replace value only.
+
+Changing BA000000 0000/BA000000 0090* to BA <CoreCount> 0000 0000/BA <CoreCount> 0000 0090* substituting <CoreCount> with the hexadeciamal value matching your physical core count.
+
+Note: The three different values reflect the patch for different versions of macOS. Be sure to change all three if you boot macOS 10.13 to macOS 12
+
+See the table below for the values matching your CPU Core Count.
+
+| CoreCount	| Hexadecimal |
+| --------- | ----------- |
+|  6 Core   |      06     |
+|  8 Core   |      08     |
+| 12 Core   |      0C     |
+| 16 Core   |      10     |
+| 32 Core   |      20     |
+  
+  
+So for example a 6 Core 5600X would result in these replace values, BA 06 0000 0000/BA 06 0000 0090
+Or a 12 Core 5900X that I have it setup as standard would result in these replace values, BA 0C 0000 0000/BA 0C 0000 0090
