@@ -8,12 +8,12 @@ EFI for Ventura
 - GPU: Sapphire Nitro+ Radeon RX 590 8GB GDDR5
 - Watercooler: Corsair H115i RGB Platinum
 - RAM: 4x CORSAIR Vengeance LPX 16GB DDR4 3600Mhz
-- NVMe: 2x SAMSUNG 980 M.2 2TB (Windows 10 and macOS Monterey)
-- SSD: Crucial 500GB (Data for Windows)
+- NVMe: 2x SAMSUNG 980 M.2 2TB (Windows 11 and macOS Monterey)
 - Wifi/Bluetooth: BCM94360CS2
-- Monitor: AOC C24G1 144Hz
-- Bootloader: OC 0.8.7
+- Monitor: 2x AOC C24G1 144Hz
+- Bootloader: OC 0.8.8
 - SMBios: MacPro 7,1
+- macOS: Ventura 13.1
 
 
 # BIOS Settings
@@ -42,10 +42,10 @@ EFI for Ventura
 
 # Kexts
 
-- Lilu.kext v1.6.2
+- Lilu.kext v1.6.3
 - VirtualSMC.kext v1.3.0
-- WhateverGreen.kext v1.6.2
-- AppleALC.kext v1.7.7
+- WhateverGreen.kext v1.6.3
+- AppleALC.kext v1.7.8
 - AirportBrcmFixup.kext v2.1.6
 - SmallTreeIntel82576.kext v1.0
 - LucyRTL8125Ethernet.kext v1.1.0
@@ -63,6 +63,9 @@ EFI for Ventura
 - IntelBTPatcher.kext v2.2.0 (Disabled by default)
 - IntelBluetoothFirmware.kext v2.2.0 (Disabled by default)
 
+# INSTALL NOTES​
+Using PlistEdit Pro, Xcode or ProperTree add your details by modifying the following
+<img width="646" alt="1126595787_Screenshot2020-01-16at19_25_01 png 890a13d93c1ce4f42ee7dedb6d156e1e" src="https://user-images.githubusercontent.com/58921288/210339017-080d141a-0732-458b-ba3e-4f751a405665.png">
 
 # WIFI / BLUETOOTH​
 
@@ -72,7 +75,7 @@ If you are using internal Intel wifi-bluetooth, use Intel wifi-bluetooth kext. J
 
 # GPU​
 
-## IF NOT USING AMD RX 6950 XT SERIES
+## IF NOT USING AMD RX 6950 XT
 
 Remove EFI/OC/ACPI/SSDT-GPU-6950XT.aml and remove it from conflig.plist ( ACPI -> Add ).
 
@@ -102,3 +105,4 @@ See the table below for the values matching your CPU Core Count.
   
 So for example a 6 Core 5600X would result in these replace values, BA 06 0000 0000/BA 06 0000 0090
 Or a 12 Core 5900X that I have it setup as standard would result in these replace values, BA 0C 0000 0000/BA 0C 0000 0090
+
