@@ -4,7 +4,7 @@ EFI for Ventura
 # Specs:
 
 - Motherboard: ROG STRIX X570-E GAMING
-- CPU: AMD Ryzen 9 3900X
+- CPU: AMD Ryzen 9 5900X
 - GPU: Sapphire Nitro+ Radeon RX 590 8GB GDDR5
 - Watercooler: Corsair H115i RGB Platinum
 - RAM: 4x CORSAIR Vengeance LPX 16GB DDR4 3600Mhz
