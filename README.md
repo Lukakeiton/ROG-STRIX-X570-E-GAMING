@@ -11,9 +11,9 @@ EFI for Ventura
 - NVMe: 2x SAMSUNG 980 M.2 2TB (Windows 11 and macOS Monterey)
 - Wifi/Bluetooth: BCM94360CS2
 - Monitor: 2x AOC C24G1 144Hz
-- Bootloader: OC 0.8.8
+- Bootloader: OC 0.8.9
 - SMBios: MacPro 7,1
-- macOS: Ventura 13.1
+- macOS: Ventura 13.2.1
 
 
 # BIOS Settings
