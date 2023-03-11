@@ -11,7 +11,7 @@ EFI for Ventura
 - NVMe: 2x SAMSUNG 980 M.2 2TB (Windows 11 and macOS Monterey)
 - Wifi/Bluetooth: BCM94360CS2
 - Monitor: 2x AOC C24G1 144Hz
-- Bootloader: OC 0.8.9
+- Bootloader: OC 0.9.0
 - SMBios: MacPro 7,1
 - macOS: Ventura 13.2.1
 
@@ -42,10 +42,10 @@ EFI for Ventura
 
 # Kexts
 
-- Lilu.kext v1.6.3
-- VirtualSMC.kext v1.3.0
-- WhateverGreen.kext v1.6.3
-- AppleALC.kext v1.7.8
+- Lilu.kext v1.6.4
+- VirtualSMC.kext v1.3.1
+- WhateverGreen.kext v1.6.4
+- AppleALC.kext v1.8.0
 - AirportBrcmFixup.kext v2.1.6
 - SmallTreeIntel82576.kext v1.0
 - LucyRTL8125Ethernet.kext v1.1.0
